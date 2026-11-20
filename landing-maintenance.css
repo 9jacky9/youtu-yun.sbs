@@ -1,0 +1,19 @@
+/* Scoped heading and keyboard improvements; original brand design remains. */
+h1[data-landing-title]{font-size:clamp(2rem,4.4vw,4.4rem);line-height:1.18;letter-spacing:-.025em;overflow-wrap:anywhere}
+h1[data-landing-title] .landing-brand{display:block;font-size:.74em;line-height:1.3;margin-bottom:.35em}
+h1[data-landing-title] .landing-focus{display:block;font-size:1em}
+a:focus-visible,button:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+@media(max-width:600px){h1[data-landing-title]{font-size:clamp(1.65rem,7.8vw,2.3rem);line-height:1.22;max-width:100%;margin-top:.4em;margin-bottom:.6em}h1[data-landing-title] .landing-brand{font-size:.78em}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+/* Final observed navigation repairs. */
+@media(max-width:600px){
+.navbar .nav-inner{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px 8px;height:auto!important;min-height:0;padding-top:12px;padding-bottom:12px}
+.navbar .nav-inner>a:first-child{grid-column:1;grid-row:1;white-space:nowrap;font-size:17px!important;letter-spacing:0;min-width:0;gap:5px}
+.navbar .nav-inner>a:last-child{grid-column:2;grid-row:1;white-space:nowrap;font-size:12px!important;padding:10px!important;width:auto!important;min-width:0}
+.navbar .nav-inner>ul{display:flex!important;grid-column:1/-1;grid-row:2;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin:0!important;padding:0!important;position:static!important;width:auto!important;height:auto!important}
+.navbar .nav-inner>ul li{min-width:0}
+.navbar .nav-inner>ul a{display:block;white-space:nowrap;font-size:13px!important;line-height:1.5;padding:6px 0}
+.navbar .nav-inner>a:first-child span{white-space:nowrap}
+.hero-section{padding-top:40px!important}
+}
